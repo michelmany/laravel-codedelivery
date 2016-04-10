@@ -2,16 +2,16 @@
 
 @section('content')
     <div class="container">
-        <h3>Nova categoria</h3>
+        <h3>Editando categoria {{ $category->name }}</h3>
 
         @include('errors._check')
 
-        {!! Form::open(['route'=>'admin.categories.store']) !!}
+        {!! Form::model($category, ['route'=>['admin.categories.update', $category->id]]) !!}
 
         @include('admin.categories._form')
 
         <div class="form-group">
-            {!! Form::submit('Criar categoria', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Salvar categoria', ['class' => 'btn btn-primary']) !!}
         </div>
 
         {!! Form::close() !!}
