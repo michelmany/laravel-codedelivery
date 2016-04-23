@@ -6,7 +6,7 @@
 
         @include('errors._check')
 
-        {!! Form::open(['class'=>'form']) !!}
+        {!! Form::open(['route'=>'customer.order.store', 'class'=>'form']) !!}
 
             <div class="form-group">
                 <label for="">Total:</label>
@@ -36,6 +36,11 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="form-group">
+                {!! Form::submit('Criar pedido', ['class'=>'btn btn-primary']) !!}
+            </div>
+
 
         {!! Form::close() !!}
     </div>
