@@ -65,6 +65,7 @@ class OrderService
             }
             $order->save();
             \DB::commit();
+            return $order;
 
         } catch(\Exception $e) {
             \DB::rollback();
