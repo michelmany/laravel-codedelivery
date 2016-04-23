@@ -51,3 +51,13 @@ Route::group(['prefix'=>'customer', 'middleware'=> 'auth.checkrole:client', 'as'
     Route::post('order/store', ['as'=>'order.store', 'uses'=>'CheckoutController@store']);
 
 });
+
+/* OAUTH2 */
+Route::post('oauth/access_token', function() {
+    return Response::json(Authorizer::issueAccessToken());
+});
+
+/* API */
+Route::group(['prefix'=>'api', 'middleware'=>'oauth', 'as'=>'api.'], function() {
+    
+});
