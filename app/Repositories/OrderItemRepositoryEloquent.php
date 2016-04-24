@@ -24,7 +24,7 @@ class OrderItemRepositoryEloquent extends BaseRepository implements OrderItemRep
         return OrderItem::class;
     }
 
-    
+
 
     /**
      * Boot up the repository, pushing criteria
