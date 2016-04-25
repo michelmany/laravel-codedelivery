@@ -12,7 +12,7 @@
                 <label for="">Total:</label>
                 <p id="total"></p>
                 <a href="#" id="btnNewItem" class="btn btn-default">Novo Item</a>
-
+                <br><br>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
